@@ -1,0 +1,272 @@
+:root {
+  --bg: #fafaf8;
+  --bg-alt: #f0ede8;
+  --text: #2c2c2c;
+  --text-muted: #6b6b6b;
+  --accent: #3b6e8c;
+  --accent-hover: #2a5470;
+  --border: #dedad4;
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.65;
+  border-top: 3px solid var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ── Hero Header ── */
+.hero {
+  background: linear-gradient(160deg, #ebe5dc 0%, var(--bg) 100%);
+  text-align: center;
+  padding: 64px 24px 52px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 28px;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.55);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.hero-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: white;
+  text-decoration: none;
+}
+
+/* ── Page Content ── */
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 52px 24px 80px;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 52px;
+}
+
+section h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── About ── */
+.about p {
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.tag {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── News ── */
+.news-list {
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 76px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Publications ── */
+.pub-list {
+  list-style: none;
+}
+
+.pub-item {
+  padding: 16px 14px;
+  border-radius: 6px;
+  margin-bottom: 2px;
+  transition: background 0.12s;
+}
+
+.pub-item:hover {
+  background: var(--bg-alt);
+}
+
+.pub-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.pub-authors strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pub-venue {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.venue-name {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.venue-year {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.pub-badges {
+  display: inline-flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.badge {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.badge-conf {
+  border-color: #3b6e8c44;
+  color: var(--accent);
+  background: #3b6e8c0e;
+}
+
+.badge-arxiv {
+  border-color: #a0733044;
+  color: #7a5520;
+  background: #a073300e;
+}
+
+.badge-workshop {
+  border-color: #5a8a3a44;
+  color: #3e6620;
+  background: #5a8a3a0e;
+}
+
+/* ── Year divider ── */
+.pub-year-group {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding: 10px 14px 4px;
+  margin-top: 4px;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+  .hero-links {
+    gap: 6px;
+  }
+}
