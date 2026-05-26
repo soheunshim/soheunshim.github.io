@@ -292,6 +292,30 @@ section h2::after {
   background: #5a8a3a0e;
 }
 
+/* ── Author expand/collapse ── */
+.authors-extra {
+  display: none;
+}
+.pub-authors.authors-expanded .authors-extra {
+  display: inline;
+}
+.authors-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-left: 3px;
+  font-family: inherit;
+  vertical-align: middle;
+}
+.authors-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* ── Publication summary ── */
 .pub-summary {
   font-size: 0.855rem;
