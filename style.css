@@ -163,6 +163,9 @@ section h2::after {
 }
 
 .pub-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
   padding: 16px 14px;
   border-radius: 6px;
   margin-bottom: 2px;
@@ -171,6 +174,54 @@ section h2::after {
 
 .pub-item:hover {
   background: var(--bg-alt);
+}
+
+.pub-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Figure thumbnail ── */
+.pub-figure {
+  flex-shrink: 0;
+  position: relative;
+  width: 112px;
+}
+
+.pub-figure img {
+  width: 112px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  display: block;
+  cursor: zoom-in;
+}
+
+.pub-figure-zoom {
+  display: none;
+  position: absolute;
+  left: 124px;
+  top: 0;
+  z-index: 100;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  width: 320px;
+  pointer-events: none;
+}
+
+.pub-figure:hover .pub-figure-zoom {
+  display: block;
+}
+
+.pub-figure-zoom img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: none;
 }
 
 .pub-title {
@@ -239,6 +290,14 @@ section h2::after {
   border-color: #5a8a3a44;
   color: #3e6620;
   background: #5a8a3a0e;
+}
+
+/* ── Publication summary ── */
+.pub-summary {
+  font-size: 0.855rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  line-height: 1.55;
 }
 
 /* ── Year divider ── */
